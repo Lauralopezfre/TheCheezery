@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingHorizontal="40dp"
     tools:context=".RegisterActivity">
@@ -11,63 +12,72 @@
     <ImageView
         android:layout_width="215dp"
         android:layout_height="65dp"
-        android:src="@drawable/hello"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
-        android:layout_gravity="center_horizontal"
-        />
+        android:src="@drawable/hello" />
 
     <EditText
         android:id="@+id/name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inputmargin"
         android:hint="@string/name"
         android:inputType="text"
-        android:layout_marginTop="@dimen/inputmargin"
-        />
+        android:textColor="@color/very_purple"
+        android:textColorHighlight="@color/dusty_white"
+        android:textColorHint="@color/cardview_dark_background"
+        tools:visibility="visible" />
 
     <EditText
         android:id="@+id/lastname_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inputmargin"
         android:hint="@string/last_name"
         android:inputType="text"
-        android:layout_marginTop="@dimen/inputmargin"/>
+        android:textColor="@color/very_purple"
+        android:textColorHint="@color/cardview_dark_background"
+        tools:visibility="visible" />
 
 
     <EditText
         android:id="@+id/email_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inputmargin"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="@dimen/inputmargin"/>
+        android:textColor="@color/very_purple"
+        android:textColorHint="@color/cardview_dark_background" />
 
     <EditText
         android:id="@+id/password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inputmargin"
         android:hint="@string/pass"
         android:inputType="textPassword"
-        android:layout_marginTop="@dimen/inputmargin"/>
+        android:textColor="@color/very_purple"
+        android:textColorHint="@color/cardview_dark_background" />
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inputmargin"
         android:text="@string/terms"
-        android:textStyle="italic"
-        android:layout_marginTop="@dimen/inputmargin"/>
+        android:textColor="@color/black"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/button_sign_in"
         android:layout_width="219dp"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
+        android:background="@drawable/round_button"
         android:text="@string/sign_in"
-        android:textColor="@color/white"
-        android:background="@drawable/round_button"/>
-
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

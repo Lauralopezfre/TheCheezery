@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/very_purple</item>
         <item name="colorPrimaryVariant">@color/less_purple</item>
-        <item name="colorOnPrimary">@color/dusty_white</item>
+        <item name="colorOnPrimary">@color/purple_grey</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/pinky</item>
         <item name="colorSecondaryVariant">@color/last_pinky</item>

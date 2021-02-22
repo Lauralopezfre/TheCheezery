@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
@@ -29,46 +30,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:paddingHorizontal="50dp">
+
         <Button
             android:id="@+id/button_cold_drinks"
-            android:text="@string/colddriks"
-            android:textColor="@color/dusty_white"
+            android:layout_width="128dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginRight="@dimen/menubuttonmargin"
             android:background="@drawable/first_gradient"
             android:paddingHorizontal="@dimen/menubuttonpadding"
-            android:layout_marginRight="@dimen/menubuttonmargin"
-            android:layout_gravity="fill_horizontal"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menubuttontext"
             android:paddingVertical="@dimen/menubuttonpadding_v"
+            android:text="@string/colddriks"
+            android:textColor="@color/dusty_white"
+            android:textSize="@dimen/menubuttontext"
             />
 
         <Button
             android:id="@+id/button_hot_drinks"
-            android:text="@string/hotdrinks"
-            android:textColor="@color/dusty_white"
+            android:layout_width="126dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="@dimen/menubuttonmargin"
             android:background="@drawable/first_gradient"
             android:paddingHorizontal="@dimen/menubuttonpadding"
-            android:layout_marginLeft="@dimen/menubuttonmargin"
-            android:layout_gravity="fill_horizontal"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menubuttontext"
             android:paddingVertical="@dimen/menubuttonpadding_v"
-            />
+            android:text="@string/hotdrinks"
+            android:textColor="@color/dusty_white"
+            android:textSize="@dimen/menubuttontext" />
 
         <Button
             android:id="@+id/sweets"
-            android:text="@string/sweet"
-            android:textColor="@color/dusty_white"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginRight="@dimen/menubuttonmargin"
             android:background="@drawable/second_gradient"
             android:paddingHorizontal="@dimen/menubuttonpadding"
-            android:layout_marginRight="@dimen/menubuttonmargin"
-            android:layout_gravity="fill_horizontal"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menubuttontext"
             android:paddingVertical="@dimen/menubuttonpadding_v"
-            />
+            android:text="@string/sweet"
+            android:textColor="@color/dusty_white"
+            android:textSize="@dimen/menubuttontext" />
 
         <Button
             android:id="@+id/salties"
