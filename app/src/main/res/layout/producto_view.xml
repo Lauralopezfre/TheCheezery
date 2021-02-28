@@ -31,7 +31,8 @@
             android:id="@+id/producto_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descripción del producto"/>
+            android:text="Descripción del producto"
+            android:textColor="@color/purple_grey"/>
     </LinearLayout>
 
     <TextView
