@@ -24,7 +24,17 @@ class ProductosActivity : AppCompatActivity() {
 
         agregaProductos()
         var listview: ListView = findViewById(R.id.listview) as ListView
-        var adaptador: AdaptadorProductos = AdaptadorProductos(this, coldDrinks)
+        var adaptador: AdaptadorProductos
+
+        if(intent.getStringExtra("Button").toString() == "ColdDrinks"){
+            adaptador = AdaptadorProductos(this, coldDrinks)
+        }else if(intent.getStringExtra("Button").toString() == "HotDrinks"){
+            adaptador = AdaptadorProductos(this, hotDrinks)
+        }else if(intent.getStringExtra("Button").toString() == "Sweets") {
+            adaptador = AdaptadorProductos(this, sweets)
+        }else{
+            adaptador = AdaptadorProductos(this, salties)
+        }
         listview.adapter = adaptador
     }
 
@@ -43,7 +53,7 @@ class ProductosActivity : AppCompatActivity() {
             hotDrinks.add(Product("Chai Latte", R.drawable.chailatte, "Spiced tea concentrate with milk", 6.0))
             hotDrinks.add(Product("Capuccino", R.drawable.capuccino, "A cappuccino is an espresso-based coffee drink, prepared with steamed foam.", 7.0))
             hotDrinks.add(Product("American coffee", R.drawable.americano, "Espresso with hot water", 2.0))
-        }else if(intent.getStringExtra("Button").toString() == "sweets"){
+        }else if(intent.getStringExtra("Button").toString() == "Sweets"){
             sweets.add(Product("Blueberry cake", R.drawable.blueberrycake, "Vanilla cake flavor, topped with cheese topping and blueberries.", 6.0))
             sweets.add(Product("Chocolate cupcake", R.drawable.chocolatecupcake, "Chocolate cupcakes topped with butter cream and cherries", 3.0))
             sweets.add(Product("Lemon tartalette", R.drawable.lemontartalette, "Pastry shell with a lemon flavored filling", 4.0))
