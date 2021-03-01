@@ -17,11 +17,25 @@ class MenuActivity : AppCompatActivity() {
 
         btnCold.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("Button", "ColdDrinks")
+            startActivity(intent)
+        }
+
+        btnSweets.setOnClickListener {
+            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("Button", "Sweets")
+            startActivity(intent)
+        }
+
+        btnSalties.setOnClickListener {
+            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("Button", "Salties")
             startActivity(intent)
         }
 
         btnHot.setOnClickListener {
-            var intent:  Intent = Intent(this, HotDrinksActivity::class.java)
+            var intent: Intent = Intent(this, ProductosActivity::class.java)
+            intent.putExtra("Button", "HotDrinks")
             startActivity(intent)
         }
     }
