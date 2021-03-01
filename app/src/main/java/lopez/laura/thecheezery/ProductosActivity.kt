@@ -1,6 +1,7 @@
 package lopez.laura.thecheezery
 
 import android.content.Context
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,15 +26,22 @@ class ProductosActivity : AppCompatActivity() {
         agregaProductos()
         var listview: ListView = findViewById(R.id.listview) as ListView
         var adaptador: AdaptadorProductos
+        var imgPortada : ImageView = findViewById(R.id.img_portada) as ImageView
 
         if(intent.getStringExtra("Button").toString() == "ColdDrinks"){
             adaptador = AdaptadorProductos(this, coldDrinks)
+            imgPortada.setImageResource(R.drawable.colddrinks)
+
         }else if(intent.getStringExtra("Button").toString() == "HotDrinks"){
             adaptador = AdaptadorProductos(this, hotDrinks)
+            imgPortada.setImageResource(R.drawable.hotdrinks)
+
         }else if(intent.getStringExtra("Button").toString() == "Sweets") {
             adaptador = AdaptadorProductos(this, sweets)
+            imgPortada.setImageResource(R.drawable.sweets)
         }else{
             adaptador = AdaptadorProductos(this, salties)
+            imgPortada.setImageResource(R.drawable.salties)
         }
         listview.adapter = adaptador
     }
@@ -48,7 +56,7 @@ class ProductosActivity : AppCompatActivity() {
             coldDrinks.add(Product("Peanut Milkshake", R.drawable.peanutmilkshake, "Vanilla ice cream, mixed with peanut butter and chocolate.", 7.0))
         }else if(intent.getStringExtra("Button").toString() == "HotDrinks"){
             hotDrinks.add(Product("Latte", R.drawable.latte, "Coffee drink made with espresso and steamed milk", 6.0))
-            hotDrinks.add(Product("Hot chocolate", R.drawable.hotchocolate, "Heated drink consisting of shaved chocolate, topped with marshmallows.", 5.0))
+            hotDrinks.add(Product("Hot chocolate", R.drawable.hotchocolate, "Heated drink consisting of shaved chocolate, topped with marshmallows.", 5.0 ))
             hotDrinks.add(Product("Espresso", R.drawable.espresso, "Full-flavored, concentrated form of coffee.", 4.0))
             hotDrinks.add(Product("Chai Latte", R.drawable.chailatte, "Spiced tea concentrate with milk", 6.0))
             hotDrinks.add(Product("Capuccino", R.drawable.capuccino, "A cappuccino is an espresso-based coffee drink, prepared with steamed foam.", 7.0))
@@ -72,6 +80,7 @@ class ProductosActivity : AppCompatActivity() {
 
     }
 
+
     private class AdaptadorProductos:BaseAdapter{
         var productos = ArrayList<Product>()
         var contexto: Context? = null
@@ -83,6 +92,8 @@ class ProductosActivity : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             var prod = productos[position]
             var inflador = LayoutInflater.from(contexto)
+
+
             var vista = inflador.inflate(R.layout.producto_view, null)
 
             var ima = vista.findViewById(R.id.producto_img) as ImageView
@@ -90,10 +101,13 @@ class ProductosActivity : AppCompatActivity() {
             var desc = vista.findViewById(R.id.producto_descripcion) as TextView
             var precio = vista.findViewById(R.id.producto_precio) as TextView
 
+
             ima.setImageResource(prod.image)
             nom.setText(prod.name)
             desc.setText(prod.description)
             precio.setText("$${prod.price}")
+
+
 
             return vista
         }

@@ -3,7 +3,8 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:padding="20dp"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="2dp"
     >
 
     <ImageView
@@ -17,7 +18,9 @@
         android:layout_weight="3"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:paddingLeft="15dp"
+        android:paddingVertical="12dp">
+
 
         <TextView
             android:id="@+id/producto_nombre"
@@ -25,14 +28,17 @@
             android:layout_height="wrap_content"
             android:textColor="@color/very_purple"
             android:textSize="22dp"
-            android:text="Caramel Frap"/>
+            android:text="Caramel Frap"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/producto_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descripción del producto"
-            android:textColor="@color/purple_grey"/>
+            android:textColor="@color/purple_grey"
+            android:textSize="13dp"
+            />
     </LinearLayout>
 
     <TextView
@@ -43,6 +49,7 @@
         android:gravity="center"
         android:textColor="@color/very_purple"
         android:textSize="20dp"
-        android:text="$5.00"/>
+        android:text="$5.00"
+        android:textStyle="bold"/>
 
 </LinearLayout>

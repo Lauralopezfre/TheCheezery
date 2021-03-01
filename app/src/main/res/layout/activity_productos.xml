@@ -9,9 +9,10 @@
     tools:context=".ProductosActivity">
 
     <ImageView
+        android:id="@+id/img_portada"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/colddrinks"/>
+        android:layout_height="115dp"
+        android:src="@drawable/colddrinks" />
 
     <ListView
         android:id="@+id/listview"
